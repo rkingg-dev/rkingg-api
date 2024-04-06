@@ -24,7 +24,6 @@ class UserController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'contact_number' => 'required',
-            // Add validation rules for other fields here
         ]);
 
         $user = User::create($request->all());
@@ -47,7 +46,6 @@ class UserController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'contact_number' => 'required',
-            // Add validation rules for other fields here
         ]);
 
         $user = User::findOrFail($id);

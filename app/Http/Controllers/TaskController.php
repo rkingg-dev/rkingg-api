@@ -20,7 +20,6 @@ class TaskController extends Controller
         $request->validate([
             'task_title' => 'required',
             'task_description' => 'required',
-            // Add validation rules for other fields here
         ]);
 
         $task = Task::create($request->all());
@@ -40,7 +39,6 @@ class TaskController extends Controller
         $request->validate([
             'task_title' => 'required',
             'task_description' => 'required',
-            // Add validation rules for other fields here
         ]);
 
         $task = Task::findOrFail($id);
