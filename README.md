@@ -43,3 +43,6 @@ This repository contains the backend API for an educational project aimed at bui
 | POST   | /login      | Log in an existing user.         |
 | POST   | /logout     | Log out the currently authenticated user. |
 | POST   | /refresh    | Refresh the authentication token.|
+
+
+Test release 0.0.1
