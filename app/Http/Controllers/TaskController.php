@@ -46,7 +46,7 @@ class TaskController extends Controller
         return response()->json(['message' => 'Task updated successfully', 'task' => $task], 200);
     }
 
-    // Delete a task
+    // Delete a task //
     public function destroy($id)
     {
         $task = Task::findOrFail($id);
