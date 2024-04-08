@@ -28,7 +28,7 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:api')
 Route::post('refresh', [AuthController::class, 'refresh'])->middleware('auth:api');
 
 // User Endpointss
-Route::prefix('users')->middleware('auth:api')->group(function () {
+Route::prefix('users')->group(function () {
     Route::get('/', [UserController::class, 'index']);
     Route::post('/', [UserController::class, 'store']);
     Route::get('/{user}', [UserController::class, 'show']);
@@ -37,7 +37,7 @@ Route::prefix('users')->middleware('auth:api')->group(function () {
 });
 
 // Website Endpoints
-Route::prefix('websites')->middleware('auth:api')->group(function () {
+Route::prefix('websites')->group(function () {
     Route::get('/', [WebsiteController::class, 'index']);
     Route::post('/', [WebsiteController::class, 'store']);
     Route::get('/{website}', [WebsiteController::class, 'show']);
@@ -46,7 +46,7 @@ Route::prefix('websites')->middleware('auth:api')->group(function () {
 });
 
 // Task Endpoints
-Route::prefix('tasks')->middleware('auth:api')->group(function () {
+Route::prefix('tasks')->group(function () {
     Route::get('/', [TaskController::class, 'index']);
     Route::post('/', [TaskController::class, 'store']);
     Route::get('/{task}', [TaskController::class, 'show']);
